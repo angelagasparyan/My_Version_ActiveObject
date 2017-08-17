@@ -1,15 +1,19 @@
 require_relative "base"
 
 base = Base.new
-puts "qani user eq avelacnelu"
+print "Count of users: "
 n = gets.chomp.to_i
 n.times do 
-puts "nermuceq useri anuny"
+print "User name: "
 name = gets.chomp
-puts "nermuceq useri azganuny"
+print "User surname: "
 surname = gets.chomp
 user = User.new name,surname
 base.add user
 end
-puts base.users
 
+
+base.all_users
+print "Find user with Id:"
+id = gets.chomp.to_i
+puts base.get_user_byId id
